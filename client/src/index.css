@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    display: flex;
+    background-color: #1E2022;
+    margin: 4vh 10vw 0;
+    font-family: Montserrat;
+    color: #F0F5F9;
+}
+
+.myNav{
+    height: 10vh;
+    font-size: clamp(10px, 3vw, 33px);
+    display: flex;
+    gap: 5vw;
+}
+
+.myPage{
+    display: flex;
+    height: 75vh;
+    width: 80vw;
+}
+
+.redSpan{
+    color: #FF001D;
+}
+
+.introDiv{
+    width: 40vw;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(10px, 3vw, 33px)
+}
+
+
+.myName{
+    color: #C8D6DF;
+    font-weight: bold;
+    font-size: clamp(25px, 5vw, 70px);
+}
