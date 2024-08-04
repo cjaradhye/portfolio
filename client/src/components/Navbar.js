@@ -4,6 +4,7 @@ function Navbar(){
     return(
         <ul className="myNav">
             <li className="navItem">Portfolio</li>
+            
             <li>About</li>
             <li>Contact</li>
         </ul>

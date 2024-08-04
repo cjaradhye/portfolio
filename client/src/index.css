@@ -4,14 +4,19 @@
 
 
 body{
+    width: 100vw;
     display: flex;
     background-color: #1E2022;
-    margin: 4vh 10vw 0;
     font-family: Montserrat;
     color: #F0F5F9;
 }
 
 .myNav{
+    background-color: #1E2022;
+    top: 0;
+    padding: 3vw 10vw 4.5vw 10vw;
+    position: fixed;
+    width: 100vw;
     height: 10vh;
     font-size: clamp(10px, 3vw, 33px);
     display: flex;
@@ -19,9 +24,17 @@ body{
 }
 
 .myPage{
+    margin: 12vh 10vw 0;
     display: flex;
     height: 75vh;
     width: 80vw;
+}
+
+.secondPage{
+    margin: 10vh 0;
+    display: flex;
+    height: 75vh;
+    width: 100vw;
 }
 
 .redSpan{
@@ -42,4 +55,55 @@ body{
     color: #C8D6DF;
     font-weight: bold;
     font-size: clamp(25px, 5vw, 70px);
+}
+
+.myPic{
+    max-width: 30vw; 
+    height: auto;
+}
+
+/* Projects */
+
+/* .projects-title{
+    max-height: 25vh;
+    width: auto;
+} */
+
+.honeycomb{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.honeycomb-layer{
+    height: 40vh;
+    gap: 1px;
+    display: flex;
+}
+
+.project-title{
+    width: 100vh;
+    max-height: 40vh;
+}
+
+.half-comb{
+    max-height: 35vh;
+    width: auto;
+}
+.comb{
+    padding: 0px 8px;
+    width: 35.2vh;
+    max-height: 35vh;
+}
+
+.comb:hover{
+    transform: scale(1.01),rotate(90deg);
+}
+
+.hexagon {
+    
+    background-color: #52616B;
+    transform: rotate(90deg);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    margin: 0%;
 }
