@@ -1,0 +1,90 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .hexagon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  
+  .hex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hex-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: -1.6rem; /* Offset to align hexagon layers */
+  }
+  
+  .hex {
+    width: 200px;
+    height: 115px;
+    position: relative;
+    cursor: pointer;
+    transform: translateZ(0);
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hex::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transform: rotate(60deg);
+    transform-origin: 0 0;
+  }
+  
+  .hex::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transform: rotate(-60deg);
+    transform-origin: 0 0;
+  }
+  
+  /* Hover Effect */
+  .hex:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .hex-row {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  
+    .hex {
+      width: 100px;
+      height: 57px;
+    }
+  }
+  
